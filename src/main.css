@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(145deg, #e5ccff, #9533ff);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+/* S-E-L-E-C-T-I-O-N */
+
+.select-div {
+  display: flex;
+  height: 100vh;
+  gap: 10rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.select {
+  font-size: 3rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: #fff;
+  padding: 2rem 4rem;
+  border-radius: 1rem;
+  background-color: #080808;
+  cursor: pointer;
+  transition: 0.15s ease-out;
+}
+
+.select:hover {
+  transform: scale(1.05);
+}
+
+/* L-O-G   I-N */
+
+.main-div {
+  background-color: #fff;
+  padding: 2rem 2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+input {
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  border: none;
+  padding: 0.8rem 1rem;
+  margin: 0.5rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+.pass-info button {
+  font-size: 1.2rem;
+  font-weight: 900;
+  border: none;
+  border-radius: 0.5rem;
+  text-align: center;
+  width: 60px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btns a {
+  color: #fff;
+  background-color: #ff33ff;
+}
+
+.submit {
+  background-color: #f9f9f9;
+}
+
+.btns * {
+  text-decoration: none;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1rem;
+  color: #000;
+  margin: 1rem;
+  cursor: pointer;
+}
