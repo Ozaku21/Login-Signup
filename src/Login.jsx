@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+
 function Login() {
   const [userValue, setUserValue] = useState("");
   const [passValue, setPassValue] = useState("");
@@ -50,7 +53,7 @@ function Login() {
             type="button"
             onClick={() => setVisiblePass(!visiblePass)}
           >
-            {visiblePass ? "Hide" : "Show"}
+            <FontAwesomeIcon icon={visiblePass ? faEyeSlash : faEye} />
           </button>
         </div>
         <div className="btns">
