@@ -92,10 +92,10 @@ function Login() {
           </button>
         </div>
         <div className="btns">
+          <Link to="/login">Log in</Link>
           <button className="submit" type="submit">
             Sign up
           </button>
-          <Link to="/login">Log in</Link>
         </div>
       </form>
       {msg && <p>{msg}</p>}
