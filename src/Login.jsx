@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
@@ -13,9 +12,11 @@ function Login() {
   function handleSubmit(e) {
     e.preventDefault();
     if (!userValue || !passValue) {
-      setMsg("please fill out both fields");
+      setMsg("Please fill out both fields");
       return;
     }
+    // Additional validation can be added here
+
     setMsg("Login Successful!");
     setUserValue("");
     setPassValue("");
@@ -37,6 +38,7 @@ function Login() {
             placeholder="Username"
             onChange={(e) => setUserValue(e.target.value)}
             required
+            aria-label="Username"
           />
         </div>
         <div className="pass-info">
@@ -47,20 +49,22 @@ function Login() {
             placeholder="Password"
             onChange={(e) => setPassValue(e.target.value)}
             required
+            aria-label="Password"
           />
           <button
             className="pass-visibility"
             type="button"
             onClick={() => setVisiblePass(!visiblePass)}
+            aria-label={visiblePass ? "Hide password" : "Show password"}
           >
             <FontAwesomeIcon icon={visiblePass ? faEyeSlash : faEye} />
           </button>
         </div>
         <div className="btns">
-          <Link to="/signup">Sign up</Link>
           <button className="submit" type="submit">
             Log in
           </button>
+          <Link to="/signup">Sign up</Link>
         </div>
       </form>
       {msg && <p>{msg}</p>}
